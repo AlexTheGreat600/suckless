@@ -22,7 +22,8 @@ resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst)
 
 	switch (rtype) {
 	case STRING:
-		*sdst = ret.addr;
+		/* Note: this leaks memory */
+		*sdst = strdup(ret.addr);
 		break;
 	case INTEGER:
 		*idst = strtoul(ret.addr, NULL, 10);
@@ -42,12 +43,18 @@ config_init(Display *dpy)
 	ResourcePref *p;
 
 	XrmInitialize();
+
 	resm = XResourceManagerString(dpy);
 	if (!resm)
 		return;
 
 	db = XrmGetStringDatabase(resm);
+	if (!db)
+		return;
+
 	for (p = resources; p < resources + LEN(resources); p++)
 		resource_load(db, p->name, p->type, p->dst);
+
+	XrmDestroyDatabase(db);
 }
 

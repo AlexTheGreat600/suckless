@@ -6,6 +6,9 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Cascadia Code:pixelsize=16:antialias=true:autohint=true";
+static char *font2[] = {
+    "Noto Color Emoji:pixelsize=10"
+};
 
 static int borderpx = 2;
 

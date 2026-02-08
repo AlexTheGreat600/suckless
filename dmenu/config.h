@@ -6,7 +6,8 @@ static int caret_width = 1;                 /* -cw option; set default caret wid
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static char *fonts[] =
 {
-    "JetBrains Mono:size=8:style=Bold"
+    "JetBrains Mono:size=8:style=Bold",
+    "Noto Color Emoji:size=8"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 

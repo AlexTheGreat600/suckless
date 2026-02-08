@@ -232,6 +232,7 @@ zoomabs(const Arg *arg)
 
 	xunloadfonts();
 	xloadfonts(usedfont, arg->f);
+	xloadsparefonts();
 
 	cresize(0, 0);
 	redraw();
@@ -1125,6 +1126,9 @@ xinit(int cols, int rows)
 
 	usedfont = (opt_font == NULL)? font : opt_font;
 	xloadfonts(usedfont, 0);
+
+	/* spare fonts */
+	xloadsparefonts();
 
 	/* colors */
 	xw.cmap = XCreateColormap(xw.dpy, parent, xw.vis, None);
