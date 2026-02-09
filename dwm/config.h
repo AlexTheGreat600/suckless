@@ -113,6 +113,7 @@ static char *colors[][ColCount] = {
 static const char *const autostart[] = {
     "picom", NULL,
     "slstatus", NULL,
+    "xclickroot", "-1", "xdg-xmenu", NULL,
     "nitrogen", "--restore", NULL,
     NULL /* terminate */
 };
