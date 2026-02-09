@@ -83,14 +83,17 @@ const int notifiable_levels[] = {
  */
 static const struct arg args[] = {
     /* function         format                        argument */
-    { cpu_perc,         "\x02 CPU: %s%%\x09 :",       NULL                  },
-    { alsa_master_vol,  "\x03 VOL: %s :",             NULL                  },
-    { datetime,         "\x4 %s \x09:",               "%I:%M:%S %p"         },
-    { ram_perc,         ";\x02RAM: %s%%\x09  :: ",    NULL                  },
-    { backlight_perc,   "\x03 BKL: %s\x09  ::  ",     "radeon_bl0"          },
-    { uptime,           "\x04UPT: %s\x09  ::  ",      NULL                  },
-    { keymap,           "\x05KMP: %s\x09  ::  ",      NULL                  },
-    { temp,             "\x06TMP: %s%%\x09  ::  ",    "/sys/class/thermal/thermal_zone0/temp" },
-    { swap_perc,        "\x02SWP: %s%\x09",           NULL                  },
+    { cpu_perc,         "\x02 CPU: %s%%\x09 :",         NULL                  },
+    { alsa_master_vol,  "\x03 VOL: %s :",               NULL                  },
+    { datetime,         "\x4 %s \x09:",                 "%I:%M:%S %p"         },
+    { ram_perc,         ";\x02RAM: %s%%\x09  :: ",      NULL                  },
+    { backlight_perc,   "\x03 BKL: %s\x09  :: ",       "radeon_bl0"          },
+    { uptime,           "\x04 UPT: %s\x09  :: ",        NULL                  },
+    { keymap,           "\x05 KMP: %s\x09  :: ",        NULL                  },
+    { temp,             "\x07 TMP: %s%%\x09  :: ",      "/sys/class/thermal/thermal_zone0/temp" },
+    { swap_perc,        "\x06 SWP: %s%\x09  :: ",       NULL                  },
+    { datetime,         "\x02 DAT: %s\x09  :: ",        "%x"                  },
+    { disk_perc,        "\x03 DSK: %s%%\x09  :: ",      "/"                   },
+    { username,         "\x04 USR: %s\x09",             NULL                  },
     //{ battery_notify, "",       "BAT0"}, /* There is nothing to print its just a notifications*/
 };
