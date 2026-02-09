@@ -91,6 +91,6 @@ static const struct arg args[] = {
     { uptime,           "\x04UPT: %s\x09  ::  ",      NULL                  },
     { keymap,           "\x05KMP: %s\x09  ::  ",      NULL                  },
     { temp,             "\x06TMP: %s%%\x09  ::  ",    "/sys/class/thermal/thermal_zone0/temp" },
-    { swap_perc,        "\x07SWP: %s%\x09",           NULL                  },
+    { swap_perc,        "\x02SWP: %s%\x09",           NULL                  },
     //{ battery_notify, "",       "BAT0"}, /* There is nothing to print its just a notifications*/
 };
