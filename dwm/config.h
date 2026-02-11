@@ -28,7 +28,6 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const char statussep              = ';'; /* separator between status bars */
 static const char *fonts[]               = { "Cascadia Code:size=8:style=Bold" };
-static const char dmenufont[]            = "JetBrains Mono:size=8:style=Bold";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -239,16 +238,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {
-    "dmenu_run",
-    "-m", dmenumon,
-    "-fn", dmenufont,
-    "-nb", normbgcolor,
-    "-nf", normfgcolor,
-    "-sb", selbgcolor,
-    "-sf", selfgcolor,
-    NULL
-};
+static const char *dmenucmd[] = {"pulsar-desktop", NULL};
 
 static const char* termcmd[]  = { "st", NULL };
 static const char* firefoxcmd[] = {"firefox", NULL};
