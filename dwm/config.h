@@ -268,39 +268,32 @@ static const char* pulsar_cmdbookmarks_cmd[] = {"pulsar-cmdbookmarks", NULL};
 static const char* pulsar_webbookmarks_cmd[] = {"pulsar-webbookmarks", NULL};
 static const char* pulsar_filebookmarks_cmd[] = {"pulsar-filebookmarks", NULL};
 
-static const char* tfilemancmd[] = {"st", "-e", "lfrun", NULL};
-static const char* tbrowsercmd[] = {"st", "-e", "elinks", NULL};
-
 static const Key on_empty_keys[] = {
     /* modifier key                function            argument */
     { 0,            XK_Return,     spawn,              {.v = termcmd } },
     { 0,            XK_p,          spawn,              {.v = dmenucmd } },
     { 0,            XK_b,          spawn,              {.v = firefoxcmd } },
     { 0,            XK_f,          spawn,              {.v = filemancmd } },
-
-    { 0,            XK_period,      spawn,             { .v = pulsar_mime_cmd } },
-    { 0,            XK_g,           spawn,             { .v = pulsar_games_cmd } },
-    { 0,            XK_n,           spawn,             { .v = pulsar_music_cmd } },
-    { 0,            XK_s,           spawn,             { .v = pulsar_sources_cmd } },
-    { 0,            XK_v,           spawn,             { .v = pulsar_videos_cmd } },
-    { 0,            XK_p,           spawn,             { .v = pulsar_desktop_cmd } },
-    { 0,            XK_m,           spawn,             { .v = pulsar_manpages_cmd } },
-    { 0,            XK_t,           spawn,             { .v = pulsar_process_cmd } },
-    { 0,            XK_e,           spawn,             { .v = pulsar_emojis_cmd } },
-    { 0,            XK_i,           spawn,             { .v = pulsar_pictures_cmd } },
-    { 0,            XK_semicolon,   spawn,             { .v = pulsar_packages_cmd } },
-    { 0,            XK_q,           spawn,             { .v = pulsar_websearch_cmd } },
-    { 0,            XK_d,           spawn,             { .v = pulsar_documents_cmd } },
-    { 0,            XK_w,           spawn,             { .v = pulsar_wallpapers_cmd } },
-    { 0,            XK_x,           spawn,             { .v = pulsar_xresources_cmd } },
-    { 0,            XK_k,           spawn,             { .v = pulsar_keybindings_cmd } },
-    { 0,            XK_a,           spawn,             { .v = pulsar_applications_cmd } },
-    { 0,            XK_c,           spawn,             { .v = pulsar_cmdbookmarks_cmd } },
-    { 0,            XK_b,           spawn,             { .v = pulsar_webbookmarks_cmd } },
-    { 0,            XK_f,           spawn,             { .v = pulsar_filebookmarks_cmd } },
-
-    { ShiftMask,    XK_b,          spawn,              {.v = tbrowsercmd } },
-    { ShiftMask,    XK_f,          spawn,              {.v = tfilemancmd } },
+    { 0,            XK_period,     spawn,              { .v = pulsar_mime_cmd } },
+    { 0,            XK_g,          spawn,              { .v = pulsar_games_cmd } },
+    { 0,            XK_n,          spawn,              { .v = pulsar_music_cmd } },
+    { 0,            XK_s,          spawn,              { .v = pulsar_sources_cmd } },
+    { 0,            XK_v,          spawn,              { .v = pulsar_videos_cmd } },
+    { 0,            XK_p,          spawn,              { .v = pulsar_desktop_cmd } },
+    { 0,            XK_m,          spawn,              { .v = pulsar_manpages_cmd } },
+    { 0,            XK_t,          spawn,              { .v = pulsar_process_cmd } },
+    { 0,            XK_e,          spawn,              { .v = pulsar_emojis_cmd } },
+    { 0,            XK_i,          spawn,              { .v = pulsar_pictures_cmd } },
+    { 0,            XK_semicolon,  spawn,              { .v = pulsar_packages_cmd } },
+    { 0,            XK_q,          spawn,              { .v = pulsar_websearch_cmd } },
+    { 0,            XK_d,          spawn,              { .v = pulsar_documents_cmd } },
+    { 0,            XK_w,          spawn,              { .v = pulsar_wallpapers_cmd } },
+    { 0,            XK_x,          spawn,              { .v = pulsar_xresources_cmd } },
+    { 0,            XK_k,          spawn,              { .v = pulsar_keybindings_cmd } },
+    { 0,            XK_a,          spawn,              { .v = pulsar_applications_cmd } },
+    { 0,            XK_c,          spawn,              { .v = pulsar_cmdbookmarks_cmd } },
+    { 0,            XK_b,          spawn,              { .v = pulsar_webbookmarks_cmd } },
+    { 0,            XK_f,          spawn,              { .v = pulsar_filebookmarks_cmd } },
 };
 
 /*
